@@ -1,1 +1,1 @@
-__all__ = ["Exceptions", "Device", "MSC", "SCSI", "MTP", "CCID"]
+__all__ = ["Exceptions", "Device", "MSC", "SCSI", "MTP", "CCID", "QCDM"]
