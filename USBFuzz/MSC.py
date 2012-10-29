@@ -22,7 +22,7 @@ class MSCCBW(Packet):
 
     BLOCK_SIZE = 0x200
 
-    def build(self, internal=1):
+    def build(self):
         # update fields that depend on values in SCSI layer
         if SCSICmd in self:
             scsicmd = self[SCSICmd].payload
@@ -30,7 +30,7 @@ class MSCCBW(Packet):
                 self.overloaded_fields.update({"ExpectedDataSize": scsicmd.AllocationLength})
             if scsicmd.default_fields.has_key("TransferLength"):
                 self.overloaded_fields.update({"ExpectedDataSize": scsicmd.TransferLength * self.BLOCK_SIZE})
-        return Packet.build(self, internal)
+        return Packet.build(self)
 
     def post_build(self, p, pay):
         # default value for SCSI Command Block length

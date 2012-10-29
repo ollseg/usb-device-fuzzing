@@ -21,5 +21,7 @@ USBFuzz.CCID: scapy layers and USB device interface class for the USB Integrated
 
 USBFuzz.MTP: scapy layers and USB device interface class for the USB Media Tranfer Protocol (based on Picture Transfer Protocol)
 
+USBFuzz.QCDM: scapy layers and USB device interface class for the Qualcomm baseband DIAG protocol
+
 examples: examples of simple fuzzers built using the USBFuzz modules
 
